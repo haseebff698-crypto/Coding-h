@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Text-to-Speech",
+  "description": "A full-featured Text-to-Speech web application powered by the Google Gemini API. Convert text into high-quality audio with various voice options, and download the output as a WAV file.",
+  "requestFramePermissions": []
+}

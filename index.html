@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Text-to-Speech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: '#8A2BE2', // Bright Purple
+              'primary-focus': '#7B1FA2',
+              'primary-light': '#E0B0FF',
+              secondary: '#39A7FF', // Vivid Blue
+              'secondary-focus': '#007BFF',
+              accent: '#FF69B4', // Hot Pink
+              'neutral-light': 'rgba(255, 255, 255, 0.1)',
+              'base-100': '#121212', // Darker background
+              'base-200': '#1E1E1E',
+              'base-300': '#2A2A2A',
+              'content-light': '#EAEAEA',
+              'content-medium': '#A0A0A0',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+              'background-pan': 'backgroundPan 15s ease infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(-10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              backgroundPan: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              }
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-base-100 text-content-light font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
